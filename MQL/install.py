@@ -1,31 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-about = """
-Python script to copy files to an other one
-
-    Copyright (C) 2014 "FemtoTrader" <femto.trader@gmail.com>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>
-
-I'm developer and I provide under free software license some softwares that can be useful
-for currencies users/traders.
-If you consider that what I'm doing is valuable
-you can send me some crypto-coins.
-https://sites.google.com/site/femtotrader/donate
-"""
-
+about = ""
 import argparse
 import logging
 import traceback
@@ -41,7 +17,7 @@ def copy_from_dir(args):
     current_dir = os.path.dirname(os.path.abspath(__file__))
     #current_dir = os.path.join(current_dir, "test")
     
-    mt4_directories = ["C:\\Program Files (x86)\\MT4 Alpari NZ Demo"]
+    mt4_directories = ["C:\\Program Files (x86)\\MT4 Alpari Demo"]
     for mt4_dir in mt4_directories:
         for mql4_dir in ['Experts', 'Include', 'Libraries', 'Scripts']:
             logging.info(mql4_dir)
