@@ -1,0 +1,12 @@
+addEventListener("fetch", event => {
+  event.respondWith(handleRequest(event.request))
+})
+async function handleRequest(request) {
+  const url = new URL(request.url)
+  url.hostname = "api.telegram.org"
+  const newRequest = new Request(url, request)
+  newRequest.headers.set('Host', 'api.telegram.org')
+  const response = await fetch(newRequest)
+  return response
+}
+

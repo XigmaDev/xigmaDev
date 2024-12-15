@@ -17,7 +17,7 @@ drop_cache 1
 drop_cache 2
 
 echo "Reinitializing swap..."
-sudo swapoff -a && sudo swapon -a
+#sudo swapoff -a && sudo swapon -a
 echo "Swap reinitialized."
 
 echo "Cache drop and swap reinitialization complete."
